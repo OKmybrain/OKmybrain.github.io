@@ -1,0 +1,238 @@
+/* 全局重置 - 保证跨浏览器一致性 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #ffffff; /* 纯白背景，匹配图示 */
+  color: #000000; /* 黑色文字 */
+  padding: 40px 20px; /* 页面内边距 */
+  max-width: 1200px; /* 内容最大宽度，居中显示 */
+  margin: 0 auto;
+}
+
+/* 导航栏 - 保留苹果风格，和首页一致 */
+nav {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin: -40px -20px 60px -20px; /* 抵消body padding，全屏导航 */
+  padding: 0 20px;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.nav-logo {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* ENTREE 标题样式 - 匹配图示 */
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.entree-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #d32f2f; /* 红色 ENTREE 文字 */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #000000; /* 黑色分隔线 */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+.section-header {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+/* 只给 Beverages 板块增加上边距 */
+.beverages-section {
+  margin-top: 80px; /* 数值可按需调整，比如 60px/80px/100px */
+}
+
+.beverages-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #d32f2f; /* 红色 ENTREE 文字 */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #000000; /* 黑色分隔线 */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+
+/* 菜品网格布局 - 2行3列，匹配图示 */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 固定3列，匹配图示 */
+  gap: 40px 20px; /* 行列间距，匹配图示 */
+  margin-top: 40px;
+}
+
+/* 菜品卡片样式 - 极简无阴影，匹配图示 */
+.menu-card {
+  text-align: center;
+  background-color: transparent; /* 透明背景，无卡片框 */
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+/* 菜品图片容器 - 匹配图示比例 */
+.menu-img {
+  width: 100%;
+  height: 280px; /* 匹配图示图片高度 */
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-color: #f8f8f8; /* 图片占位浅灰 */
+}
+
+.menu-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 保持图片比例，填充容器 */
+  display: block;
+}
+
+/* 菜品名称 - 英文+中文双语，匹配图示 */
+.menu-name {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* 菜品价格 - 澳元样式，匹配图示 */
+.menu-price {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
+/* 购物车按钮 - 可选（图示无按钮，如需保留则隐藏/极简） */
+.menu-btn {
+  display: none; /* 隐藏按钮，完全匹配图示；如需保留可取消注释 */
+  /* 如需保留按钮的极简样式：
+  padding: 6px 12px;
+  background-color: transparent;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 0;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  */
+}
+
+/* .menu-btn:hover {
+  background-color: #f0f0f0;
+} */
+
+/* 响应式适配 - 小屏幕自动调整列数 */
+@media (max-width: 900px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr); /* 平板2列 */
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-grid {
+    grid-template-columns: 1fr; /* 手机1列 */
+  }
+  .menu-img {
+    height: 220px; /* 手机端图片高度适配 */
+  }
+}
+
+/* 底部样式 - 极简匹配整体风格 */
+footer {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 12px;
+  color: #666666;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+/* 菜品卡片悬浮放大效果（核心样式） */
+.menu-card {
+  transition: transform 0.3s ease; /* 整体卡片过渡动画，可选 */
+  overflow: hidden; /* 防止图片放大超出卡片 */
+}
+
+/* 图片容器悬浮放大 */
+.menu-img {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* 平滑的放大动画曲线 */
+  transform-origin: center center; /* 从图片中心放大，而非左上角 */
+  overflow: hidden; /* 裁剪超出部分 */
+}
+
+/* 鼠标悬浮时图片放大1.1倍 */
+.menu-card:hover .menu-img {
+  transform: scale(1.1); /* 放大倍数，1.1=110%，可调整为1.05/1.2 */
+}
+
+/* 可选：悬浮时卡片轻微上浮，增强交互感 */
+.menu-card:hover {
+  transform: translateY(-5px); /* 向上偏移5px */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* 轻微阴影，可选 */
+}
+
+/* 图片本身防止变形 */
+.menu-img img {
+  transition: all 0.3s ease;
+  object-fit: cover; /* 保持图片比例，裁剪多余部分 */
+}

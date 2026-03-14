@@ -1,0 +1,167 @@
+/* about.css - 关于我们页面专属样式 */
+
+/* 全局重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 导航栏（和其他页面统一风格） */
+nav {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin: -40px -20px 60px -20px;
+  padding: 0 20px;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.nav-logo {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* 当前页面激活态（About us 按钮高亮） */
+.nav-links a[href="about.html"] {
+  color: white;
+  font-weight: 500;
+  border-bottom: 1px solid white;
+}
+
+/* 店铺信息核心样式 */
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.about-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #d32f2f;
+  letter-spacing: 1px;
+}
+
+.store-info {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.store-info h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.store-info p {
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* 底部样式 */
+footer {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 12px;
+  color: #666666;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+/* 地图容器样式 */
+.map-container {
+  margin-top: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 适配移动端地图高度 */
+@media (max-width: 600px) {
+  .map-container iframe {
+    height: 250px; /* 移动端缩小地图高度 */
+  }
+}
+
+/* 合作商 Logo 样式（立体效果） */
+.partners-logos {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.partner-logo {
+  height: 60px;
+  width: auto;
+  transition: all 0.3s ease; /* 统一过渡动画 */
+  /* 核心立体样式：阴影+轻微透视+圆角 */
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.15), /* 底层阴影 */
+    0 2px 4px rgba(0, 0, 0, 0.1),  /* 中层阴影 */
+    inset 0 1px 0 rgba(255, 255, 255, 0.8); /* 顶部高光，模拟立体反光 */
+  border-radius: 4px; /* 轻微圆角，更贴合立体质感 */
+  padding: 8px; /* 内边距，避免 Logo 贴边 */
+  background-color: white; /* 白色底，增强立体对比 */
+  transform: perspective(100px) translateZ(0); /* 轻微透视，强化立体 */
+}
+
+.partner-logo:hover {
+  /* 悬浮时立体效果增强 */
+  transform: perspective(100px) translateZ(5px) scale(1.05);
+  box-shadow: 
+    0 6px 12px rgba(0, 0, 0, 0.2),
+    0 3px 6px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* 移动端适配 */
+@media (max-width: 600px) {
+  .partner-logo {
+    height: 45px;
+    padding: 6px; /* 移动端同步缩小内边距 */
+  }
+}

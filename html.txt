@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>辛の味 - 麻辣香锅 | 麻辣烫</title>
+    <!-- 引入外部CSS文件 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">辛の味</a>
+            <div class="nav-links">
+                <a href="#menu" class="menu-link">Menus</a>
+                <a href="#about">About us</a>
+                <a href="#contact">Contact us</a>
+                <a href="#order">Order Online</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <section class="hero">
+        <div class="hero-logo">辛</div>
+        <h1 class="hero-title">辛の味</h1>
+        <p class="hero-subtitle">麻辣香锅 · 麻辣烫 · 一口入魂</p>
+        <a href="#menu" class="hero-cta">立即点餐</a>
+    </section>
+
+    <!-- 菜单区 -->
+    <section id="menu" class="menu-section">
+        <h2 class="section-title">招牌菜品</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                 <div class="menu-img">
+                    <img src="pictures/drypot.png" alt="经典麻辣香锅">
+                 </div>
+                <h3 class="menu-name">经典麻辣香锅</h3>
+                <p class="menu-desc">自选食材，现炒现做，麻辣鲜香</p>
+                <p class="menu-price">¥28 - ¥58</p>
+                <button class="menu-btn">加入购物车</button>
+            </div>
+            <div class="menu-card">
+                <div class="menu-img">
+                    <img src="pictures/malatang.png" alt="骨汤麻辣烫">
+                </div>
+                <h3 class="menu-name">骨汤麻辣烫</h3>
+                <p class="menu-desc">慢熬骨汤，鲜香浓郁，可加辣</p>
+                <p class="menu-price">¥18 - ¥38</p>
+                <button class="menu-btn">加入购物车</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer>
+        <p>© 2026 辛の味 餐饮管理有限公司. 保留所有权利.</p>
+    </footer>
+
+    <!-- 引入外部JS文件（放在body末尾，确保DOM加载完成） -->
+   <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>辛の味 - 全部菜品</title>
+    <link rel="stylesheet" href="menu-style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">辛の味</a>
+            <div class="nav-links">
+                <a href="menu.html" class="menu-link">メニュー</a>
+                <a href="about.html">About us</a>
+                <a href="index.html#home">Home</a>
+                <a href="swot.html">SWOT分析</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="section-header">
+        <h2 class="entree-title">ENTREE</h2>
+        <div class="divider"></div>
+    </div>
+
+    <!-- 必须保证ID是fullMenuGrid -->
+    <section class="menu-section">
+        <div class="menu-grid" id="fullMenuGrid"></div>
+    </section>
+
+    <!-- 新增 Beverages 板块（样式和 Entree 完全一致） -->
+    <!-- menu.html 中 Beverages 板块 -->
+    <section class="menu-section beverages-section">
+    <div class="section-header">
+        <h2 class="beverages-title">BEVERAGES</h2>
+        <div class="divider"></div>
+    </div>
+    <div class="menu-grid" id="fullMenuGridBeverages"></div>
+    </section>
+    
+
+    <footer>
+        <p>© 2026 Karanomi Catering Management Co., Ltd. All rights reserved.</p>
+    </footer>
+
+    <script src="menu-script.js"></script>
+</body>
+</html>
+
+
+
+
+    <!-- 英雄区 -->
+    <section class="hero">
+        <div class="hero-logo">辛</div>
+        <h1 class="hero-title">辛の味</h1>
+        <p class="hero-subtitle">麻辣香锅 · 麻辣烫 · 一口入魂</p>
+        <a href="#menu" class="hero-cta">立即点餐</a>
+    </section>

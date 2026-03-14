@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>辛の味 - 麻辣香锅 | 麻辣烫</title>
+    <!-- 引入外部CSS文件 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">辛の味</a>
+            <div class="nav-links">
+                <a href="menu.html" class="menu-link">メニュー</a>
+                <a href="about.html">About us</a>
+                <a href="#home">Home</a>
+                <a href="swot.html">SWOT分析</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <!-- 英雄区（新增外层容器 + 两侧广告） -->
+    <section class="hero-wrapper">
+        <!-- 左侧循环广告 -->
+        <div class="hero-ad hero-ad-left">
+            <div class="ad-slider" id="leftAdSlider">
+                <img src="pictures/ad1.jpeg" alt="广告1：麻辣香锅套餐优惠" class="ad-img">
+                <img src="pictures/ad2.jpeg" alt="广告2：麻辣烫买一送一" class="ad-img">
+                <img src="pictures/ad3.jpeg" alt="广告3：新品饮品上市" class="ad-img">
+            </div>
+        </div>
+
+        <!-- 原有hero内容（包裹到中间容器） -->
+        <div class="hero">
+            <div class="hero-logo">辛</div>
+            <h1 class="hero-title">辛の味</h1>
+            <p class="hero-subtitle">麻辣香锅 · 麻辣烫 · 一口入魂</p>
+            <a href="#menu" class="hero-cta">立即点餐</a>
+        </div>
+
+        <!-- 右侧循环广告 -->
+        <div class="hero-ad hero-ad-right">
+            <div class="ad-slider" id="rightAdSlider">
+                <img src="pictures/ad4.jpeg" alt="广告4：池袋店限定福利" class="ad-img">
+                <img src="pictures/ad5.jpeg" alt="广告5：Uber Eats配送免运费" class="ad-img">
+                <img src="pictures/ad6.jpeg" alt="广告6：会员充值送好礼" class="ad-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- 菜单区 -->
+    <section id="menu" class="menu-section">
+        <h2 class="section-title">看板料理</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                 <div class="menu-img">
+                    <img src="pictures/drypot.png" alt="经典麻辣香锅">
+                 </div>
+                <h3 class="menu-name">经典麻辣香锅</h3>
+                <p class="menu-desc">食材自由選択！注文後、即座に調理。麻・辣・香・鮮が絶品。</p>
+                <p class="menu-price">￥1600</p>
+                <button class="menu-btn">カートーに入れる</button>
+            </div>
+            <div class="menu-card">
+                <div class="menu-img">
+                    <img src="pictures/malatang.png" alt="骨汤麻辣烫">
+                </div>
+                <h3 class="menu-name">骨汤麻辣烫</h3>
+                <p class="menu-desc">長時間煮込んだ濃厚骨スープ！旨みたっぷり、辛さ調節可能。</p>
+                <p class="menu-price">￥1500</p>
+                <button class="menu-btn">カートーに入れる</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer>
+        <p>© 2026 Karanomi Catering Management Co., Ltd. All rights reserved.</p>
+    </footer>
+
+    <!-- 引入外部JS文件（放在body末尾，确保DOM加载完成） -->
+   <script src="script.js"></script>
+</body>
+</html>
