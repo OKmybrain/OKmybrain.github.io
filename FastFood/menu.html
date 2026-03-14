@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>辛の味 - 全部菜品</title>
+    <link rel="stylesheet" href="menu-style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">辛の味</a>
+            <div class="nav-links">
+                <a href="menu.html" class="menu-link">メニュー</a>
+                <a href="about.html">About us</a>
+                <a href="index.html#home">Home</a>
+                <a href="swot.html">SWOT分析</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="section-header">
+        <h2 class="entree-title">ENTREE</h2>
+        <div class="divider"></div>
+    </div>
+
+    <!-- 必须保证ID是fullMenuGrid -->
+    <section class="menu-section">
+        <div class="menu-grid" id="fullMenuGrid"></div>
+    </section>
+
+    <!-- 新增 Beverages 板块（样式和 Entree 完全一致） -->
+    <!-- menu.html 中 Beverages 板块 -->
+    <section class="menu-section beverages-section">
+    <div class="section-header">
+        <h2 class="beverages-title">BEVERAGES</h2>
+        <div class="divider"></div>
+    </div>
+    <div class="menu-grid" id="beveragesMenuGrid"></div>
+    </section>
+    
+
+    <footer>
+        <p>© 2026 Karanomi Catering Management Co., Ltd. All rights reserved.</p>
+    </footer>
+
+    <script src="menu-script.js"></script>
+</body>
+</html>
